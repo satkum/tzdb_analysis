@@ -91,7 +91,7 @@ Repository structure
 --------------------
 Our public repository is organized under four folders.
 
-- The `data` folder contains both the data from TZDB releases and the TZ mailing list archives considered in our analysis. The uncompressed versions of the TZDB releases are under the subfolder tz_data_extracted. The email headers from the archives are under mail_archive_headers and the entire email texts from the archives can be found under mail_archive_body.
+- The `data` folder contains both the data from TZDB releases and the TZ mailing list archives considered in our analysis. The uncompressed versions of the TZDB releases are under the subfolder tz_data_extracted. The email headers from the archives are under mail_archive_headers and the entire email texts from the archives can be found under mail_archive_body. The TZDB releases can be directly downloaded from IANA using this [link](https://www.iana.org/time-zones) and the TZ mailing list archives can be downloaded from [here](https://mm.icann.org/pipermail/tz/).
 - The `utilities` folder contains scripts that can be used to download the mailing list archives and to extract the TZDB release files. This folder also contains the script search_emails.py to perform keyword filtering and manual inspection of the email texts as discussed in Section 3.4.
 - The `code` folder contains the scripts used to generate the results and figures, which will be generated under the `plots` folder.
 
@@ -121,5 +121,5 @@ Utilities - usage
 
   $ python utilities/search_emails.py data/mail_archive_body/ body error,issues 1
   ```
-  Some of the search keywords used to identify the emails discussed in Section 3.4 are "error", "bug", "correction", "work around", "mistake", "wrong", "crash", "issue", 'games', 'ramadan', 'game', 'festival', 'cup', 'olympics', 'football' etc.
+  Some of the search keywords used to identify the emails discussed in Section 3.4 are "error", "bug", "correction", "work around", "mistake", "wrong", "crash", "issue", "games", "ramadan", "game", "festival", "cup", "olympics", "football", etc.
 
