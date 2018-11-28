@@ -1,7 +1,7 @@
 TZDB analysis : What time is it? Managing Time in the Internet
 ==============================================================
 
-We have setup a public repository4 with all the data used in our
+We have setup this public repository with all the data used in our
 analyses and the code used to generate the figures and results
 discussed in the paper. We do not require any specialized hardware
 setup and once the listed Python package dependencies are installed,
@@ -110,7 +110,7 @@ Utilities - usage
   ```
   $ python utilities/search_emails.py <input folder> <search type> <keywords> <optional: N>
 
-  <input folder> - path to folder containing \*.body or \*.header files.
+  <input folder> - path to folder containing *.body or *.header files.
   <search type> - body or subject
   <keywords> - comma separated list of search keywords
   <N> - optional, terminate after finding N matches
