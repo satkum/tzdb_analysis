@@ -109,9 +109,10 @@ Utilities - usage
 - search_emails.py - Performing keyword searches across the mailist list archive. The script will print the contents of the matching emails to standard output.
   ```
   $ python utilities/search_emails.py <input folder> <search type> <keywords> <optional: N>
-  ```
+
   <input folder> - path to folder containing \*.body or \*.header files.
   <search type> - body or subject
   <keywords> - comma separated list of search keywords
   <N> - optional, terminate after finding N matches
+  ```
 
