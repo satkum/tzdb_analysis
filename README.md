@@ -98,15 +98,20 @@ Our public repository is organized under four folders.
 Utilities - usage
 -----------------
 
-- download_archive.py : Downloading the TZ mailing list archives. This script downloads both the header files (\*.headers) and email text files (\*.body) under the same folder. The \*.header and \*.body files should be moved to their own folders.
+- download_archive.py - Downloading the TZ mailing list archives. This script downloads both the header files (\*.headers) and email text files (\*.body) under the same folder. The \*.header and \*.body files should be moved to their own folders.
   ```
-  $ python utilities/download_archive.py <output folder to store the email header and text files>
+  $ python utilities/download_archive.py <output folder>
   ```
-- extract_tz.py : Extracting the compressed TZDB release files.
+- extract_tz.py - Extracting the compressed TZDB release files.
   ```
-  $ python utilities/extract_tz.py <input folder containing compressed TZDB releases> <output folder to store extracted release files>
+  $ python utilities/extract_tz.py <input folder> <output folder>
   ```
-- search_emails.py: Performing keyword searches across the mailist list archive.
+- search_emails.py - Performing keyword searches across the mailist list archive. The script will print the contents of the matching emails to standard output.
   ```
-  $ python utilities/search_emails.py <path to input folder> <search type> <optional: terminate after N matches>
+  $ python utilities/search_emails.py <input folder> <search type> <keywords> <optional: N>
   ```
+  <input folder> - path to folder containing \*.body or \*.header files.
+  <search type> - body or subject
+  <keywords> - comma separated list of search keywords
+  <N> - optional, terminate after finding N matches
+
