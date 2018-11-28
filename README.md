@@ -106,7 +106,7 @@ Utilities - usage
   ```
   $ python utilities/extract_tz.py <input folder> <output folder>
   ```
-- `search_emails.py` - Perform keyword searches across the mailist list archive. The script will print the contents of the matching emails to standard output.
+- `search_emails.py` - Perform keyword searches across the mailing list archive. The script will print the contents of the matching emails to standard output.
   ```
   $ python utilities/search_emails.py <input folder> <search type> <keywords> <optional: N>
 
