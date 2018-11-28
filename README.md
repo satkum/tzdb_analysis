@@ -20,7 +20,7 @@ pip install -r code/requirements.txt
 Usage
 -----
 
-To generate all the results and figures from the paper, execute the provided script. The figures are generated under `plots` folder.
+To generate all the results and figures from the paper, execute the provided script. The figures are generated under `plots` folder and statistics are written to the standard output.
 
 ```
 $ ./run_analysis.sh
@@ -98,15 +98,15 @@ Our public repository is organized under four folders.
 Utilities - usage
 -----------------
 
-- download_archive.py - Downloading the TZ mailing list archives. This script downloads both the header files (\*.headers) and email text files (\*.body) under the same folder. The \*.header and \*.body files should be moved to their own folders.
+- `download_archive.py` - Download the TZ mailing list archives. This script downloads both the header files (\*.headers) and email text files (\*.body) under the same folder. The \*.header and \*.body files should be moved to their own folders.
   ```
   $ python utilities/download_archive.py <output folder>
   ```
-- extract_tz.py - Extracting the compressed TZDB release files.
+- `extract_tz.py` - Extract the compressed TZDB release files.
   ```
   $ python utilities/extract_tz.py <input folder> <output folder>
   ```
-- search_emails.py - Performing keyword searches across the mailist list archive. The script will print the contents of the matching emails to standard output.
+- `search_emails.py` - Perform keyword searches across the mailist list archive. The script will print the contents of the matching emails to standard output.
   ```
   $ python utilities/search_emails.py <input folder> <search type> <keywords> <optional: N>
 
