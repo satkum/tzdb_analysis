@@ -5,7 +5,7 @@ We have setup this public repository with all the data used in our
 analyses and the code used to generate the figures and results
 discussed in the paper. We do not require any specialized hardware
 setup and once the listed Python package dependencies are installed,
-the bash script run_analysis.sh can be executed to reproduce all the
+the bash script `run_analysis.sh` can be executed to reproduce all the
 results and figures.
 
 Installation
@@ -115,4 +115,11 @@ Utilities - usage
   <keywords> - comma separated list of search keywords
   <N> - optional, terminate after finding N matches
   ```
+  Example:
+  ```
+  $ python utilities/search_emails.py data/mail_archive_headers/ subject google 1
+
+  $ python utilities/search_emails.py data/mail_archive_body/ body error,issues 1
+  ```
+  Some of the search keywords used to identify the emails discussed in Section 3.4 are "error", "bug", "correction", "work around", "mistake", "wrong", "crash", "issue", 'games', 'ramadan', 'game', 'festival', 'cup', 'olympics', 'football' etc.
 
