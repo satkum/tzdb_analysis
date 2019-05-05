@@ -18,4 +18,4 @@ python code/get_db_update_stats.py data/tz_update_data data/tz_data_extracted da
 echo ""
 python code/get_contributor_stats.py data/mail_archive_headers/ data/tz_data_extracted
 echo ""
-python code/plot_histogram.py data/tz_data_extracted/tzdata2018e/northamerica
+python code/plot_histogram.py data/tz_data_extracted/tzdb-2019a/northamerica

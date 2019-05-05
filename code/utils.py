@@ -326,8 +326,11 @@ def getRegionNames():
 def getReleaseNames(tzDir, mailDir):
     names = []
     for tdir in listdir(tzDir):
-        parts = tdir.split('tzdata')
-        n = parts[1]
+        if 'tzdb' in tdir:
+            n = tdir.split('-')[1]
+        else:
+            parts = tdir.split('tzdata')
+            n = parts[1]
         if (len(n) < 5):
             n = '19' + n
         if 'beta' in n:
@@ -605,12 +608,19 @@ def saveReleaseDates(tzDir, mailDir):
     releaseMails = {}
     for fname in onlyfiles:
         with open(join(mailDir, fname), 'rb') as f:
-            monthlyMsgs = pickle.load(f)
+            try:
+                monthlyMsgs = pickle.load(f)
+            except:
+                print("ERROR")
+                print(f)
 
             for mid, m in monthlyMsgs.items():
                 subject = m['subject']
                 for releaseName in releaseNames:
-                    partName = releaseName.split('tzdata')[1]
+                    if 'tzdb' in releaseName:
+                        partName = releaseName.split('-')[1]
+                    else:
+                        partName = releaseName.split('tzdata')[1]
                     if releaseName in subject or partName in subject:
                         ts = datetime.strptime(m['timestamp'], tsFormatStr)
                         if releaseName in releaseMails:
@@ -623,7 +633,10 @@ def saveReleaseDates(tzDir, mailDir):
     misses = []
     for r in releaseNames:
         if r not in releaseMails:
-            partName = r.split('tzdata')[1]
+            if 'tzdb' in r:
+                partName = r.split('-')[1]
+            else:
+                partName = r.split('tzdata')[1]
             misses.append(partName)
 
     manual_check = misses + suspects
@@ -640,7 +653,10 @@ def saveReleaseDates(tzDir, mailDir):
                 subject = m['subject']
                 ts = datetime.strptime(m['timestamp'], tsFormatStr)
                 for name in manual_check:
-                    relName = 'tzdata' + name
+                    if '2019' in name:
+                        relName = 'tzdb-' + name
+                    else:
+                        relName = 'tzdata' + name
                     if name in subject:
                         if name == '2008e' and 'Olson' in m['sender']:
                             releaseMails[relName] = (m, ts)

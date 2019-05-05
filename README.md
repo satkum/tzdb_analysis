@@ -30,20 +30,20 @@ Processed data written to file data/tz_update_data
 
 Stats for Section 3.1
 -----------------------
-Number of TZDB releases: 235
-Total no. of updates: 2248. Updates to, DST Rules: 1726, Zone Rules: 244, Both: 278
-No. of changes affecting, Past : 459, Future: 69, Both: 366
-No. of late days: 144, alldelays: 360
-Total no. of updates: 2248, Error corrections: 414
-Total no. of date ranges affted by Error corrections: 536
- -- No. of date ranges pre-1970: 135
- -- No. of date ranges post-1970: 401
+Number of TZDB releases: 240
+Total no. of updates: 2283. Updates to, DST Rules: 1741, Zone Rules: 255, Both: 287
+No. of changes affecting, Past : 476, Future: 71, Both: 372
+No. of late days: 150, alldelays: 366
+Total no. of updates: 2283, Error corrections: 427
+Total no. of date ranges affted by Error corrections: 556
+ -- No. of date ranges pre-1970: 144
+ -- No. of date ranges post-1970: 412
 
 Stats for Section 3.2
 -----------------------
-No. of months: 335
-Total no. of msgs: 17971, Avg. msgs/month: 53.644776119402984
-No. of unique contributors: 1791
+No. of months: 347
+Total no. of msgs: 19367, Avg. msgs/month: 55.81268011527378
+No. of unique contributors: 1891
 
 Data for section 3.3
 ---------------------
@@ -54,8 +54,8 @@ Countries with rule changes during years that exceed the threshold no. of rule c
 {'Belize': 1, 'Canada': 39, 'Guatemala': 1, 'United States': 40}
 == 1942 - No. of rules changes: 59 ==
 {'Canada': 25, 'Mexico': 4, 'Puerto Rico': 1, 'United States': 29}
-== 1945 - No. of rules changes: 106 ==
-{'Canada': 47, 'Cuba': 2, 'Mexico': 1, 'Puerto Rico': 2, 'United States': 54}
+== 1945 - No. of rules changes: 108 ==
+{'Canada': 47, 'Cuba': 2, 'Mexico': 1, 'Puerto Rico': 2, 'United States': 56}
 == 1967 - No. of rules changes: 28 ==
 {'Canada': 3, 'Cuba': 2, 'Dominican Republic': 1, 'United States': 22}
 == 1974 - No. of rules changes: 48 ==
@@ -84,7 +84,6 @@ Countries with rule changes during years that exceed the threshold no. of rule c
  'St Pierre & Miquelon': 2,
  'Turks & Caicos Is': 2,
  'United States': 55}
-
 ```
 
 Repository structure
